@@ -2,7 +2,9 @@ import React from "react";
 import profile from "../assets/profile.jpeg";
 const About = () => {
   return (
-    <div className="flex justify-center items-center min-h-81 gap-10 flex-col">
+    <div
+      id="about"
+      className="flex justify-center items-center h-81 gap-10 flex-col">
       <h1 className="text-3xl font-semibold">About Me</h1>
       <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-4">
         <img

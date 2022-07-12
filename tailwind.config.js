@@ -10,16 +10,19 @@ module.exports = {
         101: "90vh",
         98: ["420px"],
         87: ["87vh"],
-        81: "80vh",
-        nav: "3.98rem",
-        footer: "4.1rem",
+        81: "90vh",
+        78: "70vh",
+        75: "75vh",
+        nav: "10vh",
+        footer: "20vh",
       },
       width: {
         90: ["400px"],
+        project: ["34rem"],
       },
       minHeight: {
         101: "90vh",
-        81: "80vh",
+        81: "90vh",
       },
       colors: {
         modalbg: ["rgba(0, 0, 0, 0.7)"],
