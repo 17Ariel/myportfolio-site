@@ -1,12 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { aboutVariant } from "../utils/animationVariants";
 import profile from "../assets/profile.jpeg";
 const About = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
     <div
       id="about"
       className="flex justify-center items-center h-81 gap-10 flex-col">
-      <h1 className="text-3xl font-semibold">About Me</h1>
-      <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-4">
+      <motion.h1
+        variants={aboutVariant}
+        ref={ref}
+        animate={control}
+        initial="hidden"
+        className="text-3xl font-bold">
+        About Me
+      </motion.h1>
+      <motion.div
+        variants={aboutVariant}
+        ref={ref}
+        animate={control}
+        initial="hidden"
+        className="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center gap-4">
         <img
           src={profile}
           alt="profile"
@@ -21,7 +47,7 @@ const About = () => {
             Javascript ecosystem.
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,12 +1,11 @@
 import React from "react";
 import kapik from "../assets/kapik.png";
 import recipegram from "../assets/Recipegram.png";
-
 import Projectchild from "../components/Projectchild";
 const Project = () => {
   return (
     <div className="min-h-81 flex flex-col justify-center items-center gap-10 bg-slate-50 p-8">
-      <h1 className="text-3xl font-semibold">Projects</h1>
+      <h1 className="text-3xl font-bold">Projects</h1>
       <Projectchild
         src={kapik}
         title="Kapik"
